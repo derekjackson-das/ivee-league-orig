@@ -38,4 +38,4 @@ Target: WCAG 2.2 AA on every page. Checked with axe DevTools and a keyboard-only
 
 ## Credits
 
-Fictional photographer: Steven Walker Junior. Images are licensed stock or created for this demo; see `images/SOURCES.md`.
+Fictional photographer: Steven Walker Junior. Photographs are AI-generated for this demo; see `images/SOURCES.md`.
