@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cost calculator · Ivee League Wedding Photography</title>
+  <meta name="description" content="Get a ballpark estimate for wedding photography with Ivee League in Cambridge, Massachusetts. Sample pricing for demo purposes.">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <p class="demo-notice">This is a demo site. Ivee League Wedding Photography is fictional.</p>
+    <div class="container">
+      <a class="brand" href="index.html">Ivee League <small>Wedding Photography · Cambridge, Massachusetts</small></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="calculator.html" aria-current="page">Cost calculator</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="inquire.html" class="nav-cta">Inquire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="container">
+      <h1>Cost calculator</h1>
+      <p class="lede narrow">Pick a package, set your hours and add-ons, and the estimate updates as you go. Send it with your inquiry when it looks right.</p>
+      <p id="pricing-note"><strong>Sample pricing for demo purposes.</strong> The range allows for timeline, locations, and season. A real quote follows the inquiry.</p>
+
+      <div class="calculator-layout">
+        <form id="calculator" aria-describedby="pricing-note" novalidate>
+          <noscript><p class="result">The calculator needs JavaScript. The <a href="packages.html">packages page</a> lists the same prices.</p></noscript>
+
+          <fieldset>
+            <legend>Package</legend>
+            <label class="choice"><input type="radio" name="tier" value="elopement" checked> Elopement, from $1,800 (3 hours)</label>
+            <label class="choice"><input type="radio" name="tier" value="half-day"> Half Day, from $3,200 (6 hours)</label>
+            <label class="choice"><input type="radio" name="tier" value="full-day"> Full Day, from $4,800 (10 hours, engagement session included)</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="hours">Hours of coverage</label>
+            <span class="hint" id="hours-hint">Elopement includes 3 hours. Add up to 2 more at $350 each.</span>
+            <div class="stepper">
+              <button type="button" data-step="-1" aria-label="One hour less">&minus;</button>
+              <input id="hours" name="hours" type="number" inputmode="numeric" min="3" max="5" step="1" value="3" aria-describedby="hours-hint">
+              <button type="button" data-step="1" aria-label="One hour more">+</button>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Add-ons</legend>
+            <label class="choice"><input type="checkbox" name="second" id="second" aria-describedby="second-hint"> Second photographer, $600</label>
+            <span class="hint" id="second-hint">Not available on the Elopement package.</span>
+            <label class="choice"><input type="checkbox" name="engagement" id="engagement" aria-describedby="engagement-hint"> Engagement session, $450</label>
+            <span class="hint" id="engagement-hint"></span>
+            <label class="choice"><input type="checkbox" name="album" id="album"> Heirloom album, $900</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="travel">Travel distance from Cambridge</label>
+            <select id="travel" name="travel">
+              <option value="local">Within 25 miles (included)</option>
+              <option value="regional">25 to 60 miles, $150 (North Shore, South Shore, Worcester, southern New Hampshire)</option>
+              <option value="extended">60 to 120 miles, $350 (Cape Cod, Rhode Island, the Berkshires)</option>
+              <option value="far">More than 120 miles, $600 plus lodging (the Islands, Vermont, Maine, out of state)</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="estimate" aria-labelledby="estimate-heading" role="region">
+          <h2 id="estimate-heading">Your estimate</h2>
+          <p id="estimate-total" class="estimate-total" aria-live="polite" aria-atomic="true"></p>
+          <table id="breakdown">
+            <caption>Line items</caption>
+            <thead><tr><th scope="col">Item</th><th scope="col">Amount</th></tr></thead>
+            <tbody></tbody>
+            <tfoot><tr><th scope="row">Subtotal</th><td id="breakdown-subtotal"></td></tr></tfoot>
+          </table>
+          <p class="muted" id="estimate-note">The high end of the range adds up to 15 percent for timeline, locations, and season.</p>
+          <p><a id="send-estimate" class="button button-gold" href="inquire.html">Send this estimate with my inquiry</a></p>
+          <p><a href="inquire.html#date-checker">Check your date first</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <h2>Contact</h2>
+        <address>
+          Steven Walker Junior<br>
+          Studio by appointment, Cambridge, Massachusetts 02139<br>
+          <a href="tel:+16175550142">617-555-0142</a><br>
+          <a href="mailto:hello@iveeleague.example">hello@iveeleague.example</a>
+        </address>
+      </div>
+      <div>
+        <h2>Service area</h2>
+        <p>Cambridge and Boston, Greater Boston, the North and South Shores, Cape Cod and the Islands, the Berkshires, southern New Hampshire, and Rhode Island. Farther afield by quote.</p>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/iveeleague.demo">Instagram (placeholder account)</a></li>
+          <li><a href="https://www.pinterest.com/iveeleaguedemo">Pinterest (placeholder account)</a></li>
+          <li><a href="client-login.html">Client login</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal">This is a demo site. Ivee League Wedding Photography is fictional. Nothing submitted through this site is stored or sent anywhere. Prices, dates, and testimonials are samples. Built in plain HTML, CSS, and JavaScript to WCAG 2.2 AA.</p>
+    </div>
+  </footer>
+  <script type="module" src="js/calculator.js"></script>
+</body>
+</html>

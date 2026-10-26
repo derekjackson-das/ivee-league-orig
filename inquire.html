@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inquire · Ivee League Wedding Photography</title>
+  <meta name="description" content="Check whether your wedding date is open and send an inquiry to Ivee League Wedding Photography in Cambridge, Massachusetts. Demo only; nothing is sent.">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <p class="demo-notice">This is a demo site. Ivee League Wedding Photography is fictional.</p>
+    <div class="container">
+      <a class="brand" href="index.html">Ivee League <small>Wedding Photography · Cambridge, Massachusetts</small></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="calculator.html">Cost calculator</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="inquire.html" aria-current="page" class="nav-cta">Inquire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="container" id="date-checker" aria-labelledby="date-checker-heading">
+      <h1>Check your date and inquire</h1>
+      <h2 id="date-checker-heading">Is your date open?</h2>
+      <form id="date-form" class="date-form" novalidate>
+        <noscript><p class="result">The date checker needs JavaScript. Put your date in the form below and I'll confirm by reply.</p></noscript>
+        <div class="field">
+          <label for="check-date">Wedding date</label>
+          <span class="hint" id="check-date-hint">Any date in the next 24 months. Sample availability for demo purposes.</span>
+          <input id="check-date" name="check-date" type="date" aria-describedby="check-date-hint">
+          <p class="error-text" id="check-date-error" hidden></p>
+        </div>
+        <button type="submit" class="button">Check this date</button>
+      </form>
+      <div id="date-result" class="result" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section class="container rule-top" aria-labelledby="inquiry-heading">
+      <h2 id="inquiry-heading">Send an inquiry</h2>
+      <p class="narrow">Tell me about your day and I'll reply within two business days with availability and a quote. <span class="required-note">Required fields are marked "(required)".</span></p>
+      <p class="narrow muted">This is a demo. Nothing you type is stored or sent anywhere.</p>
+
+      <div class="error-summary" id="error-summary" tabindex="-1" hidden>
+        <h2>There is a problem</h2>
+        <ul id="error-list"></ul>
+      </div>
+
+      <form id="inquiry" method="post" novalidate>
+        <noscript><p class="result">Submitting needs JavaScript in this demo. A real site would accept the form without it. You can email <a href="mailto:hello@iveeleague.example">hello@iveeleague.example</a> instead.</p></noscript>
+
+        <fieldset>
+          <legend>About you</legend>
+          <div class="field">
+            <label for="names">Your names (required)</label>
+            <span class="hint" id="names-hint">Both partners, however you like to be addressed.</span>
+            <input id="names" name="names" type="text" autocomplete="name" aria-describedby="names-hint" required>
+          </div>
+          <div class="field">
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <span class="hint" id="phone-hint">Only if you'd rather talk than type.</span>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="phone-hint">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About the day</legend>
+          <div class="field">
+            <label for="date">Wedding date</label>
+            <span class="hint" id="date-hint">Leave blank if you haven't set one.</span>
+            <input id="date" name="date" type="date" aria-describedby="date-hint">
+          </div>
+          <div class="field">
+            <label for="venue">Venue or city (required)</label>
+            <input id="venue" name="venue" type="text" required>
+          </div>
+          <div class="field">
+            <label for="guests">Guest count (required)</label>
+            <select id="guests" name="guests" required>
+              <option value="">Choose a range</option>
+              <option value="under-30">Fewer than 30</option>
+              <option value="30-75">30 to 75</option>
+              <option value="75-120">75 to 120</option>
+              <option value="120-200">120 to 200</option>
+              <option value="over-200">More than 200</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="package">Package interest (required)</label>
+            <select id="package" name="package" required>
+              <option value="">Choose one</option>
+              <option value="not-sure">Not sure yet</option>
+              <option value="elopement">Elopement</option>
+              <option value="half-day">Half Day</option>
+              <option value="full-day">Full Day</option>
+            </select>
+          </div>
+          <div id="estimate-attached" class="result" hidden>
+            <h3>Estimate attached</h3>
+            <p id="estimate-attached-text"></p>
+            <p><a href="calculator.html" id="estimate-change">Change the estimate</a></p>
+            <button type="button" class="button button-outline" id="estimate-remove">Remove the estimate</button>
+            <input type="hidden" name="estimate" id="estimate-field">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anything else</legend>
+          <div class="field">
+            <label for="heard">How did you hear about us? (optional)</label>
+            <select id="heard" name="heard">
+              <option value="">Choose one</option>
+              <option value="search">Web search</option>
+              <option value="instagram">Instagram</option>
+              <option value="pinterest">Pinterest</option>
+              <option value="planner">Our planner</option>
+              <option value="venue">Our venue</option>
+              <option value="friend">A friend or family member</option>
+              <option value="other">Somewhere else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Tell me about your day (required)</label>
+            <span class="hint" id="message-hint">The venue, the plan, what matters most to you. A few sentences is plenty.</span>
+            <textarea id="message" name="message" aria-describedby="message-hint" required></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="button button-gold">Send inquiry</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <h2>Contact</h2>
+        <address>
+          Steven Walker Junior<br>
+          Studio by appointment, Cambridge, Massachusetts 02139<br>
+          <a href="tel:+16175550142">617-555-0142</a><br>
+          <a href="mailto:hello@iveeleague.example">hello@iveeleague.example</a>
+        </address>
+      </div>
+      <div>
+        <h2>Service area</h2>
+        <p>Cambridge and Boston, Greater Boston, the North and South Shores, Cape Cod and the Islands, the Berkshires, southern New Hampshire, and Rhode Island. Farther afield by quote.</p>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/iveeleague.demo">Instagram (placeholder account)</a></li>
+          <li><a href="https://www.pinterest.com/iveeleaguedemo">Pinterest (placeholder account)</a></li>
+          <li><a href="client-login.html">Client login</a></li>
+          <li><a href="accessibility.html">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal">This is a demo site. Ivee League Wedding Photography is fictional. Nothing submitted through this site is stored or sent anywhere. Prices, dates, and testimonials are samples. Built in plain HTML, CSS, and JavaScript to WCAG 2.2 AA.</p>
+    </div>
+  </footer>
+  <script type="module" src="js/date-checker.js"></script>
+  <script type="module" src="js/inquiry.js"></script>
+</body>
+</html>

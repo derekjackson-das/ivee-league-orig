@@ -33,6 +33,8 @@
     <section class="container">
       <h1>Portfolio</h1>
       <p class="lede">Twelve photographs across the four parts of a wedding day. Each is from a different celebration in Cambridge, Boston, or elsewhere in New England.</p>
+      <div class="filters" id="portfolio-filters" role="group" aria-label="Filter photographs by category" hidden></div>
+      <p id="filter-status" class="visually-hidden" aria-live="polite"></p>
       <ul class="photo-grid" id="portfolio-grid">
         <li data-category="ceremony"><figure><img src="images/ceremony-01.svg" width="1200" height="800" loading="lazy" alt="Two grooms exchange vows under a white arbor, the officiant between them and guests leaning in from folding chairs on the lawn."><figcaption>Ceremony</figcaption></figure></li>
         <li data-category="ceremony" class="portrait"><figure><img src="images/ceremony-02.svg" width="800" height="1200" loading="lazy" alt="A bride and her father walk down a stone-chapel aisle, her veil catching the light from tall windows on the left."><figcaption>Ceremony</figcaption></figure></li>
@@ -48,6 +50,21 @@
         <li data-category="reception" class="portrait"><figure><img src="images/reception-03.svg" width="800" height="1200" loading="lazy" alt="The couple runs through a tunnel of sparklers held by guests on a dark driveway, both grinning and slightly out of step."><figcaption>Reception</figcaption></figure></li>
       </ul>
     </section>
+
+    <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-desc">
+      <div class="lightbox-inner">
+        <p id="lightbox-title" class="lightbox-title"></p>
+        <figure>
+          <img id="lightbox-img" src="" alt="">
+          <figcaption id="lightbox-desc"></figcaption>
+        </figure>
+        <div class="lightbox-controls">
+          <button type="button" id="lightbox-prev">Previous photo</button>
+          <button type="button" id="lightbox-close">Close</button>
+          <button type="button" id="lightbox-next">Next photo</button>
+        </div>
+      </div>
+    </dialog>
 
     <section class="container rule-top" aria-labelledby="portfolio-next">
       <h2 id="portfolio-next">Like what you see?</h2>
@@ -87,5 +104,6 @@
       <p class="footer-legal">This is a demo site. Ivee League Wedding Photography is fictional. Nothing submitted through this site is stored or sent anywhere. Prices, dates, and testimonials are samples. Built in plain HTML, CSS, and JavaScript to WCAG 2.2 AA.</p>
     </div>
   </footer>
+  <script type="module" src="js/portfolio.js"></script>
 </body>
 </html>

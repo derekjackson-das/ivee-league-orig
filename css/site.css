@@ -305,3 +305,13 @@ details[open] summary { font-weight: 600; }
 section.hero { padding: 0; }
 .about-grid { display: grid; gap: var(--space-3); align-items: start; }
 @media (min-width: 48rem) { .about-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
+
+[hidden] { display: none !important; }
+.calculator-layout { display: grid; gap: var(--space-4); align-items: start; }
+@media (min-width: 60rem) { .calculator-layout { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } .estimate { position: sticky; top: var(--space-2); } }
+.estimate { border: 1px solid var(--rule); padding: var(--space-3); background: #FFFDF9; }
+.estimate table { margin-top: var(--space-2); }
+.estimate tfoot th, .estimate tfoot td { border-top: 2px solid var(--charcoal); border-bottom: 0; font-weight: 600; }
+.date-form { max-width: 36rem; }
+.lightbox-title { font-family: var(--font-serif); font-size: 1.125rem; margin: 0 0 var(--space-1); }
+.thumb:focus-visible { outline-offset: 4px; }
