@@ -114,4 +114,10 @@ python3 -m http.server 8000
 
 ---
 
-*Last updated: 2026-10-22*
+## Repositories
+
+`origin` is `derekjackson-das/ivee-league-orig` (this build). `team` is `derekjackson-das/ivee-league`, the team's parallel build. Keep them separate; the README explains why and lists the differences. Fetch from `team` to borrow commits, never push to it from here without Derek's say-so.
+
+---
+
+*Last updated: 2026-10-26*
