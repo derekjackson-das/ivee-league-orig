@@ -37,7 +37,11 @@ Both pass axe with no violations on every page and share the same photos, palett
 
 - **Inquiry form fields.** This build has the brief's full list, including guest count band, package interest, and how you heard about us. The team build uses a guest number box and omits the last two.
 - **Date checker.** This build has the "Inquire about this date" button that carries the date into the form. The team build fills the date automatically and links to the form.
-- **Form without JavaScript.** This build posts, so nothing lands in the URL. The team build submits by GET, which would put the name and email in the address bar if scripts were off.
+- **Form without JavaScript.** Both builds keep personal details out of the URL. This build posts; the team build submits by GET but leaves `name` off the personal fields, so only the contact preference travels.
+- **Calculator announcements.** The team build's live region reads the whole result sentence on every change. This build announces only "Estimated $X to $Y" and debounces typed hours, so a screen reader hears one short line.
+- **Calculator without JavaScript.** The team build's form submits the selections to the inquiry page by GET. This build shows a notice pointing to the packages page.
+- **Name fields.** The team build has two name fields with `autocomplete="name"` on the first. This build has one "Your names" field, which fits 1.3.5 Identify Input Purpose less cleanly.
+- **Hero overlay.** Worst-case heading contrast is 5.07:1 on the team build and 7.65:1 here. Both pass AA.
 - **Error messages.** The team build prefixes inline messages with "Error:" and changes the page title on a failed submit. This build does not.
 - **Stepper limits.** The team build keeps the hours buttons focusable at the limits with `aria-disabled`. This build clamps the value instead.
 
